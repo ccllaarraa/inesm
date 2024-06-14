@@ -1,0 +1,45 @@
+html {
+  scrollbar-width: none;
+
+  scroll-behavior: auto !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    margin: 0;
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  a {
+    color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  }
+
+  button {
+    background: none;
+	color: transparent;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  }
+
+  ul {
+    list-style-type: none;
+  }

@@ -1,0 +1,345 @@
+$brown : #5819198a;
+$green : #52a74157;
+$deepgreen : #69c408d2;
+$cyan : #52e0e061;
+$deepcyan : #019ebad2;
+$blue : #00ffe176;
+$yellow : #fffb005c;
+$deepyellow : #a6a40f;
+$pink : #d900ff8f;
+$deeppink : #a5008fd2;
+
+.go-to-index {
+  position: fixed;
+  bottom: 5px;
+  left: 15px;
+  font-size: 85px;
+  color: $brown;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    transition: 0.5s;
+    color: $green;
+  }
+}
+
+.stairs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  padding: 20px;
+  margin-bottom: 100px;
+  .item {
+    width: 185px;
+    min-height: 200px;
+    margin-top: -160px;
+    transition: all 1s;
+    cursor: pointer;
+    &:nth-child(1) {
+      height: 400px;
+      img {
+        margin-top: 160px;
+      }
+    }
+    img {
+      width: 185px;
+      background-color: $green;
+    }
+    .green-border {
+      border: 15px solid $green;
+    }
+    .green-border + .caption {
+      color: $deepgreen;
+    }
+    .cyan-border {
+      border: 15px solid $cyan;
+    }
+    .cyan-border + .caption {
+      color: $deepcyan;
+    }
+    .pink-border {
+      border: 15px solid $pink;
+
+    }
+    .pink-border + .caption {
+      color: $deeppink;
+    }
+    .yellow-border {
+      border: 15px solid $yellow;
+
+    }
+    .yellow-border + .caption {
+      color: $deepyellow;
+    }
+    .caption {
+      font-size: 13px;
+      text-align: center;
+      visibility: hidden;
+      opacity: 0;
+    }
+    a:hover {
+      .caption {
+        visibility: visible;
+        opacity: 1;
+        z-index: -1 !important;
+      }
+    }
+  }
+}
+
+// artist desc
+.artist-desc {
+color: $brown;
+font-size: 60px;
+line-height: 1;
+margin: 20px;
+margin-bottom: 100px;
+}
+
+// archive
+.archive {
+  margin-bottom: 100px;
+  color: $brown;
+  font-size: 22px;
+  .archive-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+    margin: -15px 0;
+    padding: 0 20px;
+    min-height: 55px;
+    .numero {
+      width: 20%;
+    }
+    .project-name {
+      width: 30%;
+    }
+    .project-type {
+      width: 30%;
+    }
+    .project-link {
+      width: 20%;
+      text-align: right;
+      &:hover {
+        transition: 0.5s;
+        color: $green;
+        cursor: pointer;
+      }
+    }
+  }
+  .c:hover {
+    background-color: $blue;
+    transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+  }
+  .r:hover {
+    background-color: $pink;
+    transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+  }
+  .v:hover {
+    background-color: $green;
+    transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+  }
+  .j:hover {
+    background-color: $yellow;
+    transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+  }
+}
+
+// contact
+.contact {
+  color: $brown;
+font-size: 60px;
+line-height: 1;
+margin: 20px;
+margin-bottom: 50px;
+a {
+  transition: 0.5s;
+  &:hover {
+    transition: 0.5s;
+    color: $green;
+  }
+}
+}
+
+.credits {
+  color: $brown;
+  font-size: 20px;
+  line-height: 1;
+  margin: 20px;
+  a {
+    transition: 0.5s;
+    &:hover {
+      transition: 0.5s;
+      color: $green;
+    }
+  }
+}
+
+
+// moments
+.moments {
+  .big-green-border {
+    position: fixed;
+    border: 15px solid $green;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    top: 0;
+  }
+  .big-title {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 60px;
+    color: $green;;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    .item {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 800px;
+    }
+    .caption {
+      text-align: center;
+      color: $deepgreen;
+    }
+  }  
+  .project-txt {
+    font-size: 60px;
+    color: $green;
+    margin: 20px;
+  }
+}
+
+
+
+// dessins
+.dessins {
+  .big-pink-border {
+    position: fixed;
+    border: 15px solid $pink;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    top: 0;
+  }
+  .big-title {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 60px;
+    color: $pink;;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    .item {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 800px;
+    }
+    .caption {
+      text-align: center;
+      color: $deeppink;
+    }
+  }  
+  .project-txt {
+    font-size: 60px;
+    color: $pink;
+    margin: 20px;
+  }
+}
+
+//vues
+
+.vues {
+  .big-cyan-border {
+    position: fixed;
+    border: 15px solid $cyan;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    top: 0;
+  }
+  .big-title {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 60px;
+    color: $cyan;;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    .item {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 800px;
+    }
+    .caption {
+      text-align: center;
+      color: $deepcyan;
+    }
+  }  
+  .project-txt {
+    font-size: 60px;
+    color: $cyan;
+    margin: 20px;
+  }
+}
+
+
+//no things
+
+.no {
+  .big-yellow-border {
+    position: fixed;
+    border: 15px solid $yellow;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    top: 0;
+  }
+  .big-title {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 60px;
+    color: $yellow;;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    .item {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 800px;
+    }
+    .caption {
+      text-align: center;
+      color: $deepyellow;
+    }
+  }  
+  .project-txt {
+    font-size: 60px;
+    color: $yellow;
+    margin: 20px;
+  }
+}
+
