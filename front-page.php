@@ -4,6 +4,28 @@ get_header();
 
 <!-- menu to index -->
 
+<?php 
+        $loop = new WP_Query( array( 'post_type' => 'images_de_fond', 'posts_per_page' => 100) ); 
+        while ( $loop->have_posts() ) : $loop->the_post();
+        $images = get_field('images_de_fond');
+        $screensaver = get_field('screensaver');
+        ?>
+
+
+<div id="screensaver" >
+    <img class="screen" src="<?php echo esc_url($screensaver['sizes']['large']); ?>" alt="<?php echo esc_attr($screensaver['alt']); ?>">
+</div>
+
+
+
+<ul class="images-background">        
+     <?php foreach( $images as $image ): ?>
+                <li> <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" ></li>
+    <?php endforeach; ?>
+</ul>
+
+<?php endwhile ?>
+
 <div class="go-to-index"><a href="#archive">a</a></div>
 
 <!-- stairs of images -->
@@ -12,14 +34,16 @@ get_header();
 
 
         <?php 
-        $loop = new WP_Query( array( 'post_type' => array('moments', 'dessins', 'no_things', 'vue_datelier'), 'posts_per_page' => 100) ); 
+        $loop = new WP_Query( array( 'post_type' => array('moments', 'dessins', 'no_things', 'vue_datelier'), 'posts_per_page' => 100,  'orderby' => 'rand') ); 
         while ( $loop->have_posts() ) : $loop->the_post();
+       
         $images = get_field('gallery');
-        $newArray = array();
+        shuffle($images);
         ?>
                     
                 <?php 
                 foreach( $images as $image ): ?>
+             
                             <div class="item">
                                 <a href="<?php the_permalink(); ?>">
                                     <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" 

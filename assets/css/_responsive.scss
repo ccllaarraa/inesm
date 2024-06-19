@@ -1,11 +1,101 @@
 @media screen and (max-width: 1200px) { 
-
+    .archive .archive-line {
+        align-items: flex-start;
+    }
+    .contact {
+        word-break: break-word;
+    }
 
 }
 
 
 @media screen and (max-width: 700px) { 
 
+
+    .stairs {
+        padding: 10px;
+        .item {
+            a {
+                position: relative;
+            }
+            height: auto;
+            min-height: auto;
+            margin-top: 0;
+            width: calc(50vw );
+            img {
+                width: calc(50vw - 32px);
+                margin-top: -40px;
+            }
+            &:nth-of-type(even) {
+                align-self: flex-end;
+              }
+            &:nth-child(1) img {
+                margin-top: 0;
+              }
+            &:nth-child(1) {
+                height: auto;
+            }
+            .caption {
+                position: absolute;
+                font-size: 9px;
+                text-align: center;
+                visibility: visible;
+                opacity: 1;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+    .artist-desc, .contact {
+        font-size: 35px;
+        line-height: 1.2;
+        margin: 10px 10px 70px 10px;
+    }
+    .archive {
+        font-size: 23px;
+        line-height: 1.2;
+    }
+    .archive .archive-line {
+        flex-direction: column; 
+        padding: 20px;
+    }
+    .archive {
+        .c {
+            background-color: $blue;
+            transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+        
+          }
+          .r {
+            background-color: $pink;
+            transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+          }
+          .v {
+            background-color: $green;
+            transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+          }
+          .j {
+            background-color: $yellow;
+            transition: 5s cubic-bezier(0, 1.09, 0.22, 1.38);
+          }
+    }
+    .archive .archive-line .numero, 
+    .archive .archive-line .project-name, 
+    .archive .archive-line .project-type,
+    .archive .archive-line .project-link {
+        width: 100%;
+    }
+    .archive .archive-line .project-link {
+        text-align: left;
+    }
+    .credits {
+        font-size: 9px;
+    }
+    .go-to-index {
+        bottom: 0px;
+        left: 10px;
+        z-index: 100;
+    }
    
       
     // end responsice

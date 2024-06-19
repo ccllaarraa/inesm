@@ -64,6 +64,7 @@ $( document ).ready(function() {
     });
   }
   
+  if ($(window).width() >= 900) {
   window.onload = () => {
     applyZigzagEffect();
     checkIfInView();
@@ -73,5 +74,33 @@ $( document ).ready(function() {
         checkIfInView();
     });
   };
-  
+ }
   // end stairs effect
+
+
+
+  
+  // screensaver atm after 6 sec
+  var timeout;
+   if ($(window).width() >= 900) {
+  window.onmousemove = function(){
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){
+      $("#screensaver img").addClass('screen-visible');
+    }, 13000);
+  }
+  window.addEventListener("mousemove", function() { 
+      $("#screensaver img").removeClass('screen-visible');
+   });
+
+   window.onscroll = function(){
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){
+      $("#screensaver img").addClass('screen-visible');
+    }, 13000);
+  }
+  window.addEventListener("onscroll", function() { 
+      $("#screensaver img").removeClass('screen-visible');
+   });
+  
+ }
