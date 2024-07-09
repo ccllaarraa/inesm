@@ -9,9 +9,9 @@ body::-webkit-scrollbar {
   }
   body {
     margin: 0;
-    font-family: "Comic Neue", cursive;
-    font-weight: 300;
-    font-style: normal;
+    min-height: 100vh;
+    font-family: "bbb-font";
+  
   }
 body::-webkit-scrollbar {
     display: none;
@@ -30,16 +30,19 @@ body::-webkit-scrollbar {
   text-decoration: inherit; /* no underline */
   }
 
-  button {
-    background: none;
-	color: transparent;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-  }
+
 
   ul {
     list-style-type: none;
+  }
+
+  .ciao {
+    display: none;
+  }
+  .reveal {
+    display: block !important;
+  }
+
+  .flex {
+    display: flex !important;
   }

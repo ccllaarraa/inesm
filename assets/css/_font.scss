@@ -1,5 +1,9 @@
 @font-face {
-	// font-family: 'comic';
-	// src: url('./assets/fonts/comic-neue_light.woff') format("woff");
+	font-family: 'bbb-font';
+	font-style: normal;
+	font-weight: 400;
+	src: 	url("./assets/fonts/BBBOcelot-Smooth.woff") format("woff"),
+			url("./assets/fonts/BBBOcelot-Smooth.woff2") format("woff2"),
+			url("./assets/fonts/BBBOcelot-Smooth.otf") format("opentype");
 }
 
