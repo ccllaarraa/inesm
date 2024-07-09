@@ -4,11 +4,15 @@ $( document ).ready(function() {
     $(".menu-close").click(function() {  //use a class, since your ID gets mangled
     $(".full-menu-ctn").addClass("ciao");  
     $(".full-menu-ctn").removeClass("reveal");  
+    $("body").removeClass("overflow");  
+
     });
 
     $(".y").click(function() {  //use a class, since your ID gets mangled
       $(".full-menu-ctn").addClass("reveal");  
       $(".full-menu-ctn").removeClass("ciao");  
+      $("body").addClass("overflow");  
+
 
       });
   });

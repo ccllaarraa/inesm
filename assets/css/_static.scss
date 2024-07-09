@@ -29,6 +29,7 @@ $white : #F4F4F4;
 	height: 100vh;
   width: 100vw;
   z-index: -1;
+  top: 0;
 }
 
 .tiles {
@@ -74,7 +75,7 @@ $white : #F4F4F4;
 .charac1 {
   position: absolute;
   top: 150px;
-  width: 120px;
+  width: 80px;
   left: 100px;
   animation: float 5s ease-in-out infinite;
 }
@@ -82,7 +83,7 @@ $white : #F4F4F4;
 .charac2 {
   position: absolute;
   top: 200px;
-  width: 120px;
+  width: 0px;
   right: 100px;
   animation: float 4s ease-in-out infinite;
 }
@@ -296,15 +297,23 @@ $size: 105px;
     animation: gelatine 0.5s infinite;
     }
   }
-  .blurry-background {
-    filter: blur(24px);
-    position: absolute;
-    background-color: white;
-    width: 93vw;
-    height: 200px;
+  transform-style: preserve-3d;
+  border-radius: 0px;
+  &::before {
+    content: "";
+    position: absolute; 
+    inset: -5px;
+    background: $white;
+    filter: blur(18px);
+    transform: translate3d(1px,-3px,-1px);
+    border-radius: inherit;
+    pointer-events: none;
+    border-radius: 10%;
+    width: auto;
+    margin: auto;
     transform: rotate(353deg);
-    border-radius: 27%;
   }
+
 }
 
 .festival-subtitle {
@@ -313,18 +322,20 @@ $size: 105px;
   text-align: center;
   font-family: "bbb-font";
   position: relative;
-  .blurry-background {
-    filter: blur(24px);
-    position: relative;
-    background-color: white;
-    width: 560px;
-    height: 126px;
+  transform-style: preserve-3d;
+  border-radius: 0px;
+  &::before {
+    content: "";
+    position: absolute; 
+    inset: -5px;
+    background: $white;
+    filter: blur(18px);
+    transform: translate3d(1px,-3px,-1px);
+    border-radius: inherit;
+    pointer-events: none;
+    border-radius: 10%;
+    width: 550px;
     margin: auto;
-    left: 0;
-    right: 0;
-    top: -100px;
-    z-index: -1;
-    border-radius: 27%;
   }
 }
 
@@ -334,20 +345,21 @@ $size: 105px;
   color: $green;
   margin: 60px 0;
   position: relative;
-  .blurry-background {
-    filter: blur(24px);
-    position: relative;
-    background-color: white;
-    width: 560px;
-    height: 126px;
+  transform-style: preserve-3d;
+  border-radius: 0px;
+  &::before {
+    content: "";
+    position: absolute; 
+    inset: -5px;
+    background: $white;
+    filter: blur(18px);
+    transform: translate3d(1px,-3px,-1px);
+    border-radius: inherit;
+    pointer-events: none;
+    border-radius: 10%;
+    width: 550px;
     margin: auto;
-    left: 0;
-    right: 0;
-    top: -100px;
-    z-index: -1;
-    border-radius: 27%;
   }
-
 }
 .festival-intro {
   .intro-text {
@@ -358,22 +370,24 @@ $size: 105px;
     font-family: Helvetica, sans-serif;
     font-size: 30px;
     line-height: 40px;
+    transform-style: preserve-3d;
+    border-radius: 0px;
+    &::before {
+      content: "";
+      position: absolute; 
+      inset: -5px;
+      background: $white;
+      filter: blur(18px);
+      transform: translate3d(1px,-3px,-1px);
+      border-radius: inherit;
+      pointer-events: none;
+      border-radius: 10%;
+      width: 850px;
+      margin: auto;
+    }
     .bbb {
       font-family: "bbb-font";
     }
-  }
-  .blurry-background {
-    filter: blur(24px);
-    position: relative;
-    background-color: white;
-    width: 800px;
-    height: 180px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: -165px;
-    z-index: -1;
-    border-radius: 27%;
   }
 }
 
@@ -383,28 +397,30 @@ $size: 105px;
     display: block;
     width: 1000px;
     text-align: center;
-    margin: 100px auto;
+    margin: 250px auto;
     color: $blue;
     font-family: "bbb-font";
     font-size: 60px;
     text-transform: uppercase;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 0px;
     &:hover {
       transition: 0.5s ease;
-      filter: drop-shadow(3px 1px 36px $red);
+      color: $red;
     }
-  }
-  .blurry-background {
-    filter: blur(24px);
-    position: relative;
-    background-color: $lightgreen;
-    width: 1000px;
-    height: 180px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: -211px;
-    z-index: -1;
-    border-radius: 27%;
+    &::before {
+      content: "";
+      position: absolute; 
+      inset: -52px;
+      background: $lightgreen;
+      filter: blur(18px);
+      transform: translate3d(1px,-3px,-1px);
+      border-radius: inherit;
+      pointer-events: none;
+      border-radius: 10%;
+    }
+  
   }
 }
 
@@ -456,29 +472,49 @@ $size: 105px;
   // width: 100px;
   // height: 100px;
   // background: pink;
-  margin-top: -50vh;
+  margin-top: -80vh;
 }
 
+
+
+
+
+
+
+// other pages
+.overkill-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 200px;
+    margin: 15px;
+  }
+}
 // page about
-.about-title {
+.about-big-title {
   font-size: 60px;
   text-align: center;
   color: $white;
-  padding-top: 100px;
   position: relative;
   text-transform: uppercase;
-  .blurry-background {
-    filter: blur(24px);
-    position: relative;
-    background-color: $yellow;
-    width: 560px;
-    height: 126px;
+  transform-style: preserve-3d;
+  border-radius: 0px;
+  width: 80vw;
+  margin: auto;
+  margin: 50px auto 200px;
+  &::before {
+    content: "";
+    position: absolute; 
+    inset: -33px;
+    background: $yellow;
+    filter: blur(18px);
+    transform: translate3d(1px,-3px,-1px);
+    border-radius: inherit;
+    pointer-events: none;
+    border-radius: 10%;
+    width: 80vw;
     margin: auto;
-    left: 0;
-    right: 0;
-    top: -100px;
-    z-index: -1;
-    border-radius: 27%;
   }
 }
 .about-ctn {
@@ -542,25 +578,29 @@ $size: 105px;
 
 
 //eco page
-.eco-title {
+.eco-big-title {
   font-size: 60px;
   text-align: center;
   color: $white;
-  padding-top: 100px;
   position: relative;
   text-transform: uppercase;
-  .blurry-background {
-    filter: blur(24px);
-    position: relative;
-    background-color: $red;
-    width: 560px;
-    height: 126px;
+  transform-style: preserve-3d;
+  border-radius: 0px;
+  width: 80vw;
+  margin: auto;
+  margin: 50px auto 200px;
+  &::before {
+    content: "";
+    position: absolute; 
+    inset: -33px;
+    background: $red;
+    filter: blur(18px);
+    transform: translate3d(1px,-3px,-1px);
+    border-radius: inherit;
+    pointer-events: none;
+    border-radius: 10%;
+    width: 80vw;
     margin: auto;
-    left: 0;
-    right: 0;
-    top: -100px;
-    z-index: -1;
-    border-radius: 27%;
   }
 }
 .eco-ctn {
@@ -625,26 +665,30 @@ $size: 105px;
 // faq
 
 //faq page
-.faq-title {
-  font-size: 60px;
-  text-align: center;
-  color: $white;
-  padding-top: 100px;
-  position: relative;
-  text-transform: uppercase;
-  .blurry-background {
-    filter: blur(24px);
+.faq-big-title {
+    font-size: 60px;
+    text-align: center;
+    color: $white;
     position: relative;
-    background-color: $red;
-    width: 560px;
-    height: 126px; 
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    border-radius: 0px;
+    width: 80vw;
     margin: auto;
-    left: 0;
-    right: 0;
-    top: -100px;
-    z-index: -1;
-    border-radius: 27%;
-  }
+    margin: 50px auto 200px;
+    &::before {
+      content: "";
+      position: absolute; 
+      inset: -33px;
+      background: $red;
+      filter: blur(18px);
+      transform: translate3d(1px,-3px,-1px);
+      border-radius: inherit;
+      pointer-events: none;
+      border-radius: 10%;
+      width: 80vw;
+      margin: auto;
+    }
 }
 .faq-ctn {
   .faq-block {
@@ -663,6 +707,8 @@ $size: 105px;
     position: relative;
     transform-style: preserve-3d;
     border-radius: 0px;
+    text-align: center;
+  
     &::before {
       content: "";
       position: absolute; 

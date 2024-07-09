@@ -30,7 +30,7 @@ get_header();
     <div class="menu-close">&#x2715;</div>
     <div class="full-menu">
         <a><div class="yellow menu-square menu-square1">About</div></a> 
-        <a><div class="red menu-square menu-square2">faq</div></a> 
+        <a><div class="red menu-square menu-square2">home</div></a> 
         <a><div class="green menu-square menu-square3">tickets</div></a> 
         <a><div class="blue menu-square menu-square4">instagram</div></a> 
         <a><div class="yellow menu-square menu-square5">discord</div></a> 
@@ -40,12 +40,15 @@ get_header();
     </div>
 </div>
 
+<!-- overkill title -->
+<div class="overkill-logo">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/Overkill_horizontal_green.png" alt="" >  
+</div>
+
+
 <!-- faq here -->
-<div class="faq-title">
-    <span>
+<div class="faq-big-title">
         FAQ
-    </span>
-    <div class="blurry-background"></div>
 </div>
 
 <!-- about-content -->
@@ -76,7 +79,6 @@ get_header();
 <!-- tickets here -->
 <div class="festival-tickets">
     <a href="" target="_blank">Tickets here</a>
-    <div class="blurry-background"></div>
 </div>
 
 

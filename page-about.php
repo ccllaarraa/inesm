@@ -29,7 +29,7 @@ get_header();
     <div class="circle-blur"></div>
     <div class="menu-close">&#x2715;</div>
     <div class="full-menu">
-        <a><div class="yellow menu-square menu-square1">About</div></a> 
+        <a><div class="yellow menu-square menu-square1">home</div></a> 
         <a><div class="red menu-square menu-square2">faq</div></a> 
         <a><div class="green menu-square menu-square3">tickets</div></a> 
         <a><div class="blue menu-square menu-square4">instagram</div></a> 
@@ -40,13 +40,17 @@ get_header();
     </div>
 </div>
 
-<!-- about here -->
-<div class="about-title">
-    <span>
-        about
-    </span>
-    <div class="blurry-background"></div>
+<!-- overkill title -->
+<div class="overkill-logo">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/Overkill_horizontal_green.png" alt="" >  
 </div>
+
+
+<!-- about here -->
+<div class="about-big-title">
+        about
+</div>
+
 
 <!-- about-content -->
 <div class="about-ctn">
@@ -77,7 +81,6 @@ The program brings local, national and international artists and creators togeth
 <!-- tickets here -->
 <div class="festival-tickets">
     <a href="" target="_blank">Tickets here</a>
-    <div class="blurry-background"></div>
 </div>
 
 

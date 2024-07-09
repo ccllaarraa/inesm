@@ -88,13 +88,11 @@ get_header();
 
 <!-- content -->
 <div class="festival-title">
-    <div class="blurry-background"></div>
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/Overkill_horizontal_green.png" alt="" >  
 </div>
 
 <div class="festival-subtitle">
     <span>Radical Joy Resistance</span>
-    <div class="blurry-background"></div>
 </div>
 
 <div class="festival-date">
@@ -102,22 +100,18 @@ get_header();
     20 — 24 November 2024<br>
     ENSCHEDE, NL
     </span>
-    <div class="blurry-background"></div>
-
 </div>
 
 <div class="festival-intro">
     <div class="intro-text"><span class="bbb">The Overkill festival</span> is a playful art festival celebrating art house video games, interactive art and films as tools 
     to engage in social challenges. 
     </div>
-    <div class="blurry-background"></div>
 
 </div>
 
 <!-- tickets here -->
 <div class="festival-tickets">
     <a href="" target="_blank">Tickets here</a>
-    <div class="blurry-background"></div>
 </div>
 
 

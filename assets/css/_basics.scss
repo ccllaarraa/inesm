@@ -46,3 +46,7 @@ body::-webkit-scrollbar {
   .flex {
     display: flex !important;
   }
+
+  .overflow {
+    overflow-y: hidden !important;
+  }
