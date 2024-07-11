@@ -9,7 +9,6 @@ body::-webkit-scrollbar {
   }
   body {
     margin: 0;
-    min-height: 100vh;
     font-family: "bbb-font";
   
   }
@@ -50,3 +49,20 @@ body::-webkit-scrollbar {
   .overflow {
     overflow-y: hidden !important;
   }
+
+  .realciao {
+    display: none !important;
+  }
+
+
+  // font size
+
+  // bbb
+  $big : 55px;
+  $medium : 25px;
+  $menu : 12px;
+
+  //helvetica
+  $mediumhel : 16px;
+  // line-height: 1.4;
+  // font-family: Helvetica, sans-serif;

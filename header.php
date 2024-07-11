@@ -27,6 +27,9 @@
 <!-- slickslider -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<!-- ajax -->
+<script>var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';</script>
+
 
     <?php
     wp_head();
@@ -39,5 +42,12 @@
 
 
 <header>
+
+<!-- screensaver -->
+<div id="screensaver" >
+    <img class="screen" src="<?php echo get_stylesheet_directory_uri(); ?>/images/streams/dithered-streams.png">
+</div>
+
+
 
 </header>

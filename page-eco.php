@@ -52,7 +52,7 @@ get_header();
 </div>
 
 <!-- eco-content -->
-<div class="eco-ctn">
+<!-- <div class="eco-ctn">
     <div class="eco-block">
         <div class="eco-title">WHAT IS THE OVERKILL?</div>
         <div class="eco-text">
@@ -75,7 +75,31 @@ The program brings local, national and international artists and creators togeth
           </div>
 
     </div>
-</div>
+</div> -->
+
+<?php if( have_rows('block') ): ?>
+    <div class="eco-ctn">
+        <?php while( have_rows('block') ): the_row(); 
+        $title = get_sub_field('title');
+        $image = get_sub_field('image');
+        $text = get_sub_field('text');
+        ?>
+            <div class="eco-block">
+                <div class="eco-title"><?php echo $title; ?></div>
+                
+                <div class="eco-text">
+                    <?php if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <?php endif; ?>
+
+                    <?php echo $text; ?>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
+<?php endif; ?>
+
+
 
 <!-- tickets here -->
 <div class="festival-tickets">

@@ -1,8 +1,13 @@
+<?php 
+/* Template Name: program */
+?>
 <?php
+
 get_header();
 ?>
 
-<!-- page single program -->
+
+<!-- page program -->
 
 <!-- gradient background -->
 <div class="background"></div>
@@ -43,74 +48,65 @@ get_header();
 </div>
 
 
-
-<?php if (have_posts()) : while (have_posts()) : the_post();
-    $piece = get_field('piece_name');
-    $img = get_field('image');
-    $text = get_field('description_text');
-    $start = get_field('time_of_start');
-    $end = get_field('time_of_end');
-    $location = get_field('location');
-    $day = get_field('day');
-     ?>
-
- <?php the_content(); ?>
-
-
-<?php endwhile; ?>
-<?php endif; ?>
-
-<!-- single program  here -->
-<div class="single-big-title">
-<?php echo the_title(); ?>
+<!-- program  here -->
+<div class="program-big-title">
+  program
 </div>
 
-<div class="single-artist">
-        <div class="artist-image"> <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>" /></div>
-        
-        <div class="single-info">
-            <div class="page-title"><?php echo $piece; ?></div>
-            <div class="artist-cat">
-                <ul class="cat-list">
-                    <?php foreach((get_the_category()) as $category) : ?>
-                        <li>
-                            <?= $category->name; ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-            <div class="day"><?php echo $day?></div>
-            <div class="time"><?php echo $start?> — <?php echo $end?></div>
-            <div class="loc">Location : <?php echo $location?> </div>
-        </div>
-      
-       
+	
+	   
 
-        <div class="artist-ctn">
-            <div class="artist-desc"><?php echo $text; ?></div>
-        </div>
+      <!-- cat -->
+      <?php $categories = get_categories(); ?>
+        <ul class="cat-list">
+          <li><a class="cat-list_item active" href="#!" data-slug="">All program</a></li>
+
+          <?php foreach($categories as $category) : ?>
+            <li>
+              <a class="cat-list_item" href="#!" data-slug="<?= $category->slug; ?>">
+                <?= $category->name; ?>
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
 
 
   
- 
-  
+        <?php 
+          $projects = new WP_Query([
+            'post_type' => 'program',
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order' => 'asc',
+          ]);  
+        ?>
+
+        <?php if($projects->have_posts()): ?>
+          <ul class="project-tiles">
+            <?php
+              while($projects->have_posts()) : $projects->the_post();
+              include('templates/_components/project-list-item.php');
+              endwhile;
+            ?>
+          </ul>
+          <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
 
 
-
-</div>
+	
+  </div>
 
   <!-- schedule here -->
-  <div class="festival-schedule">
-        <a href="" target="_blank">See full Schedule</a>
-    </div>
+<div class="festival-schedule">
+    <a href="" target="_blank">See full Schedule</a>
+</div>
 
 
 
-<!-- tickets here -->
+  <!-- tickets here -->
 <div class="festival-tickets">
     <a href="" target="_blank">Tickets here</a>
 </div>
-
 
 <?php
 get_footer();
